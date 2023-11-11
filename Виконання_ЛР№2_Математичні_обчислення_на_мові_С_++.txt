@@ -1,0 +1,94 @@
+Задача 7 
+Для решения задачи "Integer7" и нахождения суммы и произведения цифр двузначного числа, вы можете добавить следующий код после задачи "Math.1":// Integer7. Дано двозначне число. Знайти суму і добуток його цифр.
+cout << "\n Integer7. \n";
+int two_digit_number;
+// Ввод двузначного числа
+cout << "Enter a two-digit number: ";
+cin >> two_digit_number;
+
+if (two_digit_number >= 10 && two_digit_number <= 99) {
+    int first_digit = two_digit_number / 10;  // Находим первую цифру
+    int second_digit = two_digit_number % 10; // Находим вторую цифру
+    int sum = first_digit + second_digit;
+    int product = first_digit * second_digit;
+
+    // Вывод суммы и произведения
+    cout << "Sum of digits: " << sum << endl;
+    cout << "Product of digits: " << product << endl;
+} else {
+    cout << "Please enter a valid two-digit number." << endl;
+}
+Этот код позволяет ввести двузначное число, а затем находит сумму и произведение его цифр. Важно проверить, что введенное число находится в диапазоне от 10 до 99, чтобы гарантировать, что это двузначное число.
+Задача 24
+Для решения задачи "Integer24" и определения номера дня недели для K-го дня года, где 1 января - понедельник, вы можете использовать следующий код:#include <iostream>
+using namespace std;
+
+int main() {
+    int K;
+    
+    // Ввод значения K (день года)
+    cout << "Enter the value of K (1-365): ";
+    cin >> K;
+
+    if (K >= 1 && K <= 365) {
+        // Поскольку 1 января - понедельник (день недели 1), 
+        // для K-го дня года, номер дня недели можно найти следующим образом:
+        int dayOfWeek = (K + 0) % 7;
+
+        cout << "Day of the week for day " << K << " is: ";
+        switch (dayOfWeek) {
+            case 0:
+                cout << "Sunday";
+                break;
+            case 1:
+                cout << "Monday";
+                break;
+            case 2:
+                cout << "Tuesday";
+                break;
+            case 3:
+                cout << "Wednesday";
+                break;
+            case 4:
+                cout << "Thursday";
+                break;
+            case 5:
+                cout << "Friday";
+                break;
+            case 6:
+                cout << "Saturday";
+                break;
+        }
+        cout << endl;
+    } else {
+        cout << "Please enter a valid value for K (1-365)." << endl;
+    }
+
+    return 0;
+}
+Этот код позволяет ввести значение K (день года) и определяет номер дня недели для этого дня, учитывая, что 1 января - понедельник.
+Задача 4
+Для решения задачи "Integer4" и определения количества отрезков B, размещенных на отрезке A без наложения, можно использовать следующий код:#include <iostream>
+using namespace std;
+
+int main() {
+    int A, B;
+
+    // Ввод значений A и B
+    cout << "Enter the value of A: ";
+    cin >> A;
+    cout << "Enter the value of B: ";
+    cin >> B;
+
+    if (A > B && B > 0) {
+        // Используя операцию целочисленного деления, находим количество отрезков B, размещенных на A.
+        int count = A / B;
+
+        cout << "The maximum number of segments of length " << B << " that can fit on a segment of length " << A << " is: " << count << endl;
+    } else {
+        cout << "Please enter valid values (A should be greater than B, and B should be positive)." << endl;
+    }
+
+    return 0;
+}
+Этот код позволяет ввести значения A и B, а затем находит количество отрезков B, размещенных на отрезке A без наложения, при условии, что A > B и B положительное число.
